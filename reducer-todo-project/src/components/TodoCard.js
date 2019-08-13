@@ -8,7 +8,11 @@ function TodoCard(props) {
     return (
         <div className='card-container'>
             {todoState.map((object, index) => {
-                return <p key={index}>{object.todo}</p>
+                return (
+                    <div key={index} className={`todo${object.completed ? ' finished' : ''}`}>
+                        <p>{object.todo}</p>
+                    </div>
+                )
             })}
         </div>
     )

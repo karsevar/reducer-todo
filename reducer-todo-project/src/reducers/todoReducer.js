@@ -20,7 +20,7 @@ export const initialState = [
     {
         id: 2,
         todo: 'read a book',
-        completed: false
+        completed: true
     },
     {
         id: 3,
