@@ -34,7 +34,7 @@ function TodoForm (props) {
                 <input 
                     placeholder='minutes'
                     type='number'
-                    value={todo.number}
+                    value={todo.time}
                     name='time'
                     onChange={handleChange}
                 />
