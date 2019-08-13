@@ -11,11 +11,11 @@ import todoReducer, {initialState} from './reducers/todoReducer';
 function App() {
 
   const [todoState, dispatch] = useReducer(todoReducer, initialState);
-  
+
   return (
     <div className="App">
       <TodoForm />
-      <TodoCard />
+      <TodoCard todoState={todoState} />
     </div>
   );
 }
