@@ -17,6 +17,11 @@ function TodoForm (props) {
         setTodo('');
     }
 
+    const handleDelete = event => {
+        event.preventDefault();
+        dispatch({type: 'DELETE_COMPLETED'});
+    }
+
     return (
         <div className='form-container'>
             <form onSubmit={handleSubmit}>
@@ -27,7 +32,7 @@ function TodoForm (props) {
                     onChange={handleChange}
                 />
                 <button>Submit!</button>
-                <button>Delete Completed!</button>
+                <button onClick={event => handleDelete(event)}>Delete Completed!</button>
             </form>
         </div>
     )
