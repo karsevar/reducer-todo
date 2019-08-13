@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 
 function Timer(props) {
-    const [seconds, setSeconds] = useState(3);
-    const [minutes, setMinutes] = useState(0);
+    
+    const [seconds, setSeconds] = useState(0);
+    const [minutes, setMinutes] = useState(Number(props.time));
 
     function reset() {
         setSeconds(0);
@@ -30,7 +31,7 @@ function Timer(props) {
         <>
             <div className='todo-timer'>
                 <div className='time'>
-                    {minutes} : {seconds}
+                    {minutes < 0 ? <p style={{color: 'red'}}>Over Due</p> : <p>{minutes} : {seconds}</p>}
                 </div>
             </div>
         </>

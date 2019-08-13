@@ -17,7 +17,7 @@ function TodoCard(props) {
                         onClick={() => dispatch({type: 'TOGGLE_TODO', payload: object.id})}
                     >
                         <p>{object.todo}</p>
-                        {/* <Timer /> */}
+                        <Timer time={object.time} />
                     </div>
                 )
             })}
