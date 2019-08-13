@@ -3,7 +3,7 @@ import React from 'react';
 import Timer from './Timer';
 
 function TodoCard(props) {
-    // console.log(props.todoState);
+    console.log(props.todoState);
 
     const {todoState, dispatch} = props;
 

@@ -4,7 +4,8 @@ function todoReducer(state, action) {
            return [
                 ...state, {
                    id: Date.now(),
-                   todo: action.payload,
+                   todo: action.payload.todo,
+                   time: action.payload.time,
                    completed: false
                 }
            ];
@@ -38,19 +39,19 @@ export const initialState = [
     {
         id: 1,
         todo: 'eat lunch',
-        time: 5,
+        time: '5',
         completed: false
     },
     {
         id: 2,
         todo: 'read a book',
-        time: 5,
+        time: '5',
         completed: true
     },
     {
         id: 3,
         todo: 'eat dinner',
-        time: 5,
+        time: '5',
         completed: false
     }
 ];
