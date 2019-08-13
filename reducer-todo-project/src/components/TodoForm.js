@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 
 function TodoForm (props) {
 
+    const {dispatch} = props;
+
     const [todo, setTodo] = useState('');
 
     const handleChange = event => {
@@ -9,9 +11,15 @@ function TodoForm (props) {
         setTodo(event.target.value);
     };
 
+    const handleSubmit = event => {
+        event.preventDefault();
+        dispatch({type: 'ADD_TODO', payload: todo});
+        setTodo('');
+    }
+
     return (
         <div className='form-container'>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input 
                     placeholder='todo'
                     value={todo} 
@@ -19,6 +27,7 @@ function TodoForm (props) {
                     onChange={handleChange}
                 />
                 <button>Submit!</button>
+                <button>Delete Completed!</button>
             </form>
         </div>
     )

@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <TodoForm />
+      <TodoForm dispatch={dispatch} />
       <TodoCard todoState={todoState} />
     </div>
   );
