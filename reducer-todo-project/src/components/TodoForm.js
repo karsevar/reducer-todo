@@ -5,6 +5,7 @@ function TodoForm (props) {
     const [todo, setTodo] = useState('');
 
     const handleChange = event => {
+        // console.log(todo);
         setTodo(event.target.value);
     };
 
