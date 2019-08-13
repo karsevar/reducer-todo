@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.todo p {
+  text-decoration: none;
+}
+
+.finished p {
+  text-decoration: line-through;
+}
+
+.time p {
+  text-decoration: none;
+}
+
