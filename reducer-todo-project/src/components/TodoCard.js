@@ -1,7 +1,9 @@
 import React from 'react';
 
+import Timer from './Timer';
+
 function TodoCard(props) {
-    console.log(props.todoState);
+    // console.log(props.todoState);
 
     const {todoState, dispatch} = props;
 
@@ -15,6 +17,7 @@ function TodoCard(props) {
                         onClick={() => dispatch({type: 'TOGGLE_TODO', payload: object.id})}
                     >
                         <p>{object.todo}</p>
+                        <Timer />
                     </div>
                 )
             })}

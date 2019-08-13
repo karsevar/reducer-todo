@@ -2,10 +2,11 @@
   text-align: center;
 }
 
-.todo {
+.todo p {
   text-decoration: none;
 }
 
-.finished {
+.finished p {
   text-decoration: line-through;
 }
+
