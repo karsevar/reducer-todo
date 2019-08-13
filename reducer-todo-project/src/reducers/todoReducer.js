@@ -38,16 +38,19 @@ export const initialState = [
     {
         id: 1,
         todo: 'eat lunch',
+        time: 5,
         completed: false
     },
     {
         id: 2,
         todo: 'read a book',
+        time: 5,
         completed: true
     },
     {
         id: 3,
         todo: 'eat dinner',
+        time: 5,
         completed: false
     }
 ];

@@ -5,6 +5,7 @@ function TodoForm (props) {
     const {dispatch} = props;
 
     const [todo, setTodo] = useState('');
+    const [time, setTime] = useState('');
 
     const handleChange = event => {
         // console.log(todo);
@@ -31,6 +32,12 @@ function TodoForm (props) {
                     name='todo'
                     onChange={handleChange}
                 />
+                {/* <input 
+                    placeholder='minutes'
+                    value={time}
+                    name='time'
+                    onChange={handleChange}
+                /> */}
                 <button>Submit!</button>
                 <button onClick={event => handleDelete(event)}>Delete Completed!</button>
             </form>

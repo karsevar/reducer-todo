@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 function Timer(props) {
-    const [seconds, setSeconds] = useState(58);
+    const [seconds, setSeconds] = useState(3);
     const [minutes, setMinutes] = useState(0);
 
     function reset() {
@@ -11,17 +11,20 @@ function Timer(props) {
     useEffect(() => {
         let interval = null;
 
-        interval = setInterval(() => {
-            setSeconds(seconds => seconds + 1);
-        }, 1000);
+        if (minutes >= 0) {
+            interval = setInterval(() => {
+                setSeconds(seconds => seconds - 1);
+            }, 1000);
 
-        if (seconds === 60) {
-            reset();
-            setMinutes(minutes => minutes + 1) 
+            if (seconds === 0) {
+                reset();
+                setMinutes(minutes => minutes - 1);
+                setSeconds(60)
+            }
         }
 
         return () => clearInterval(interval);
-    }, [seconds]);
+    }, [minutes, seconds]);
 
     return (
         <>
