@@ -21,7 +21,12 @@ function todoReducer(state, action) {
                        return todoObject;
                    }
                })
-           ]
+           ];
+
+        case 'DELETE_COMPLETED':
+            return [
+                ...state.filter(todoObject => todoObject.completed !== true)
+            ];
 
         
         default: 
