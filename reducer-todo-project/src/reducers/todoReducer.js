@@ -11,4 +11,22 @@ function todoReducer(state, action) {
     }
 }
 
+export const initialState = [
+    {
+        id: 1,
+        todo: 'eat lunch',
+        completed: false
+    },
+    {
+        id: 2,
+        todo: 'read a book',
+        completed: false
+    },
+    {
+        id: 3,
+        todo: 'eat dinner',
+        completed: false
+    }
+];
+
 export default todoReducer;
